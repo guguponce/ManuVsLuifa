@@ -7,9 +7,6 @@
     const valores = { m: 2, M: 3, l: 2, L: 3 };
     for (let puntoIndex = 0; puntoIndex < picArr.length; puntoIndex++) {
       const punto = picArr[puntoIndex];
-      // for (const letter in valores){
-      //     letter===punto && (currentPunto+=valores[letter])
-      // }
       let currentPunto = valores[punto];
 
       if (punto.toLowerCase() == "m") {
@@ -23,7 +20,7 @@
       if (manu === 21) {
         console.log(`Manu ganó en su tiro: ${contadorManu}`);
         break;
-      } else if (manu === 20 || manu > 21) {
+      } else if (manu === 20 || manu > 21) { //Si llega a 20 se le resta el punto actual, sino no tiene chance con dobles o triples
         manu -= currentPunto;
       } else if (luifa === 21) {
         console.log(`Luifa ganó en su tiro: ${contadorLuifa}`);
